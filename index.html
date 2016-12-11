@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet">
+	<title></title>
+</head>
+<body>
+	<h1>Great Solver</h1>
+	<p class="lorem"> 
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+	</p>
+	<p class="duis">
+		 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	</p>
+	<form> 
+			a: <br/>
+				<input type="text" id="ida"><br/>
+			b: <br/>
+				<input type="text" id="idb"><br/>
+			c: <br/>
+				<input type="text" id="idc"><br/>
+			<button onclick=triangle()>Solve!</button>
+	</form>
+<script>
+
+	function triangleSolve (a, b, c) {
+		if (a==b && b==c && c==a){ 
+			return "Треугольник равносторонний";
+		} else if (a==b || b==c || c==a) { 
+			return "Треугольник равнобедренный";
+		} else { 
+			return "Треугольник разносторонний";
+		}
+	}
+	function triangle () {
+		var aSide = document.getElementById("ida").value;
+		var bSide = document.getElementById("idb").value;
+		var cSide = document.getElementById("idc").value;
+		alert (triangleSolve(aSide, bSide, cSide));
+
+	}
+
+</script>
+
+</body>
+</html>

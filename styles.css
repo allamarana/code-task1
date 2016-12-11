@@ -1,0 +1,26 @@
+body {
+	font-family: arial, sans-serif;
+	color: rgb(78, 68, 60);
+}
+.lorem {
+	background-color: lightblue;
+	width: 500px;
+	margin-left: 50px;
+	padding: 10px;
+}
+.duis {
+	background-color: lightgreen;
+	width: 500px;
+	margin-left: 50px;
+	padding: 10px;
+}
+h1 {
+	margin-left: 300px;
+}
+button {
+	background-color: red;
+	color: white;
+	padding: 30px;
+	margin-top: 50px;
+
+}
