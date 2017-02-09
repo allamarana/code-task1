@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<title>First task</title>
+	</head>
+	<body>
+		<form>
+			a:<br>
+			<input type="text" id="a"> <br>
+			b:<br>
+			<input type="text" id="b"> <br>
+			c: <br>
+			<input type="text" id="c"> <br>
+			<button type="button" id="btn"> Click it! </button>
+
+		</form>
+		<script type="text/javascript">
+			function countTriangle (a, b, c) {
+				if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2)) {
+					return "Треугольник прямоугольный";
+				} 
+				if (Math.pow(a, 2) + Math.pow(b, 2) > Math.pow(c, 2)) {
+					return "Треугольник тупоугольный";
+				} 
+				return "Треугольник остроугольный";
+			}
+
+			function triangle (){
+				 var a = document.getElementById("a").value;
+				 var b = document.getElementById("b").value;
+				 var c = document.getElementById("c").value;
+				 alert(countTriangle (a, b, c));
+			}
+			document.getElementById("btn").onclick = triangle;
+		</script>
+	</body>
+	</html>

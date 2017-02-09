@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<title>First task</title>
+	</head>
+	<body>
+		<form>
+			a:<br>
+			<input type="text" id="a"> <br>
+			b:<br>
+			<input type="text" id="b"> <br>
+			c: <br>
+			<input type="text" id="c"> <br>
+			<button type="button" id="btn" onclick "result()">Result</button>
+
+		</form>
+		<script type="text/javascript">
+			function quadRoots(a, b, c) {
+				var roots = [];
+				var dis = Math.pow(b, 2) - (4 * a * c);
+				if (dis < 0) {
+					var x = -b / (2 * a);
+					roots.push(x);
+				} else {
+					var x1 = (-b - Math.sqrt(dis)) / 2 * a;
+					var x2 = (-b + Math.sqrt(dis)) / 2 * a;
+					roots.push(x1, x2);
+				}
+				return roots;
+			}
+
+			function result () {
+				var a = document.getElementById("a").value;
+				var b = document.getElementById("b").value;
+				var c = document.getElementById("c").value;
+				var roots = quadRoots(a, b, c);
+				alert ('Roots: ' + roots.join(', '));
+				
+			}
+			document.getElementById("btn").onclick = result;
+		</script>
+	</body>
+</html>
