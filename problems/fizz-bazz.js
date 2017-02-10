@@ -1,22 +1,23 @@
 function fizzBuzz(n) {
 	var arr = [];
-	for (var i = 0; і <= n; i++){
-		if (i % 3) { 
-			arr = array.push ("Fizz") 
-		} else if (i % 5) {
-			arr = array.push ("Buzz")
-		} else if (i % 3 && 5){
-			"FizzBuzz"
-		} else {
-
+	for (var i = 1; i <= n; i++) {
+		if (i % 3 == 0 && i % 5 == 0) {
+			arr.push("FizzBuzz");
+		} else if (i % 3 == 0) { 
+			arr.push ("Fizz");
+		} else if (i % 5 == 0) {
+			arr.push ("Buzz");
+		} else { 
+			arr.push(i);
 		}
-		}
-
 	}
-
+	return arr;
 }
 
-*/const expected = [
+
+console.log(fizzBuzz(15));
+
+const expected = [
 	1,
 	2,
 	'Fizz',
@@ -33,7 +34,6 @@ function fizzBuzz(n) {
 	14,
 	'FizzBuzz'
 ];
-
 if (fizzBuzz(15).join(' ') !== expected.join(' ')) {
 	throw new Error('test not passed');
 }
