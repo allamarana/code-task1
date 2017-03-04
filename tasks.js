@@ -9,27 +9,20 @@
 }
 console.log (triangleCount(1, 3, 3));*/
 
-
-function countCoordinates (a, b, c, d, e, f) {
-	var x = ((c - a) ^ 2) + ((d - b) ^ 2);
-	var y = ((e - c) ^ 2) + ((f - d) ^ 2);
-	var z = ((a - e) ^ 2) + ((b - f) ^ 2);
-	return x, y, z;
-}
-
-function triangleSquare () {
- countCoordinates (a, b, c, d, e, f);
- var per = (x + y + z) / 2;
- var square = Math.sqrt(per * (per - x) * (per - y) * (per - z));
- return square;
-}
-
-function triangleCoordinates () {
-	countCoordinates (a, b, c, d, e, f);
-	var triangle = 0;
-	if (x == y && y == z && z == x) {
+var sideA = {x:13 , y:14};
+var sideB = {x:8 , y:4};
+var sideC = {x:16 , y:12};
+function countCoordinates (sideA, sideB, sideC) {
+	var a = Math.sqrt(Math.pow(sideB.x - sideA.x, 2) + Math.pow(sideB.y - sideA.y, 2));
+	var b = Math.sqrt(Math.pow(sideC.x - sideB.x, 2) + Math.pow(sideC.y - sideB.y, 2));
+	var c = Math.sqrt(Math.pow(sideA.x - sideC.x, 2) + Math.pow(sideA.y - sideC.y, 2));
+	var halfPer = (a + b + c) / 2;
+ 	var square = Math.sqrt(halfPer * (halfPer - a) * (halfPer - b) * (halfPer - c));
+ 	console.log ("Square is: " + square);
+ 	 var triangle = 0;
+	if (a == b && b == c && c == a) {
 		triangle = "Равносторонний";
-	} else if (x == y || y == z || z == x) {
+	} else if (a == b || b == c || c == a) {
 		triangle = "Равнобедренный";
 	} else { 
 		triangle = "Разносторонний";
@@ -37,4 +30,6 @@ function triangleCoordinates () {
 	return triangle
 }
 
-console.log (countCoordinates (1, 2, 3, 4, 5, 6));
+console.log (countCoordinates (sideA, sideB, sideC));
+	
+
