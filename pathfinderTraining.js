@@ -6,22 +6,28 @@
 
 console.log (getRandom(8, 1));*/
 
-function countAttack (bab, modifier, enchant, other){
-	var finalAttack = bab + modifier + enchant + other;
-	return finalAttack;
-
+function countAttack (data) {
+	return data.bab + data.modifier + data.enchant + data.other;
 }
-function attackData (){
-	var bab = parseInt(document.getElementById("bab").value) || 0;
-	var modifier = parseInt(document.getElementById("mod").value) || 0;
-	var enchant = parseInt(document.getElementById("enchant").value) || 0;
-	var other =parseInt(document.getElementById("other").value) || 0;
-	var final = countAttack (bab, modifier, enchant, other);
-	if (bab < 0 || modifier < 0 || enchant < 0 || other < 0) {
-		alert ('Something is lower than 0!');
-	} else {
-		alert ('your final attack is: ' + final);
-	}
 
+function parseData() {
+	var data = {};
+	['bab', 'modifier', 'enchant', 'other'].forEach(function(name) {
+		data[name] = parseInt(document.getElementById(name).value) || 0;
+		if (data[name] < 0) {
+			throw new Error('Something is lower than 0.');
+		}
+	});
+	return data;
+}
+function attackData () {
+	try {
+		var data = parseData();
+	} catch (error) {
+		alert(error.message);
+		return;
+	}
+	var final = countAttack(data);
+	alert('your final attack is: ' + final);
 }
 document.getElementById("btn").onclick = attackData;
