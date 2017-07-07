@@ -37,12 +37,11 @@ function fillSnakeMatrix(matrix) {
 		}
 	
 	}
-	return matrix	
+	return matrix;
 }
 
-function randomNum (min, max){
-
-	return Math.floor(Math.random()*(max - min) + min);
+function randomNum(min, max) {
+	return Math.floor(Math.random() * (max - min) + min);
 }
 
 function fillRandomMatrix(matrix, a, b) {
@@ -73,11 +72,63 @@ function findMax(matrix) {
 
 }
 
+function createUpperTriangleMatrix(sizeOfMatrix, fillValue) {
+	var matrix = createMatrix(sizeOfMatrix, sizeOfMatrix);
+	for(var i = 0; i < sizeOfMatrix; i++){
+		for(var j = 0; j < sizeOfMatrix; j++){
+			if(j >= i){
+				matrix[i][j] = fillValue;
+			}
+			
+		}
+	}
+	return matrix;
+}
 
-var matrix = createMatrix(5, 10);
-/*console.log(fillSnakeMatrix(matrix));*/
+
+function createLowerTriangleMatrix(sizeOfMatrix, fillValue) {
+	var matrix = createMatrix(sizeOfMatrix, sizeOfMatrix);
+	for(var i = 0; i < sizeOfMatrix; i++){
+		for(var j = 0; j < sizeOfMatrix; j++){
+			if(j <= i){
+				matrix[i][j] = fillValue;
+			}
+			
+		}
+	}
+	return matrix;
+}
+
+
+function transponeMatrix(matrix) {
+	var m = matrix.length;
+	var n = matrix[0].length;
+	for (var i = 0; i < matrix.length; ++i) {
+		for (var j = i; j < matrix[0].length; ++j) {
+			var tmp = matrix[j][i];
+			matrix[j][i] = matrix[i][j];
+			matrix[i][j] = tmp;
+		}
+	}
+	return matrix;
+}
+
+console.log(transponeMatrix([
+	[11, 12, 13, 14], 
+	[15, 16, 17, 18],
+	[19, 20, 21, 22],
+	[23, 24, 25, 26]
+]))
+/*
+123		147
+456		258
+789 	369
+*/
+
+/*var matrix = createMatrix(5, 10);
+console.log(fillSnakeMatrix(matrix));
 console.log(fillRandomMatrix(matrix, 1, 20));
-console.log(findMax(fillRandomMatrix(matrix, 1, 20)))
-
+console.log(findMax(fillRandomMatrix(matrix, 1, 20)));
+console.log(createLowerTriangleMatrix(5, 1))*/
 
 
