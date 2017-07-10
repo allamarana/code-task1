@@ -64,6 +64,7 @@ function returnSquare(n){
 }
 
 console.log(returnSquare(25));
+console
 
 
 
