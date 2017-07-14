@@ -33,11 +33,23 @@ function horizontalParallel(m){
 }
 
 function drawMatrix(matrix){
+	verticalParallel(matrix.length);
+	horizontalParallel(matrix[0].length);
+	for(var i = 0; i < matrix.length; i++){
+		for(var j = 0; j < matrix[0].length; j++){
+			if(matrix[i][j] === 1){
+				ctx.fillStyle = 'black';
+				ctx.fillRect(i * (c.width / matrix.length), j * (c.height / matrix[0].length), 
+					c.width / matrix.length, c.height / matrix[0].length);
+			}
+		}
+
+	}	
 
 }
 
+drawMatrix([[1, 0, 1, 1], [0, 1, 0, 1], [1, 0, 1, 0], [0, 1, 0, 1]]);
 
-verticalParallel(20)
-horizontalParallel(20)
+
 
 
