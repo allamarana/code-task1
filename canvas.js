@@ -48,7 +48,7 @@ function drawMatrix(matrix){
 
 }
 
-drawMatrix([[1, 0, 1, 1], [0, 1, 0, 1], [1, 0, 1, 0], [0, 1, 0, 1]]);
+drawMatrix([[1, 0, 1], [0, 1, 0], [1, 0, 1]]);
 
 
 
