@@ -6,13 +6,13 @@ function countNeighbours(matrix, x, y) {
 	if(matrix[x + 1] && matrix[x + 1][y] === 1){
 		count++;
 	}
-	if(matrix[x + 1][y - 1] === 1){
+	if(matrix[x + 1] && matrix[x + 1][y - 1] === 1){
 		count++;
 	}
-	if(matrix[x - 1][y] === 1){
+	if(matrix[x - 1] && matrix[x - 1][y] === 1){
 		count++;
 	}
-	if(matrix[x - 1][y - 1] === 1){
+	if(matrix[x - 1] && matrix[x - 1][y - 1] === 1){
 		count++;
 	}
 	if(matrix[x][y + 1] === 1){
@@ -24,18 +24,26 @@ function countNeighbours(matrix, x, y) {
 	return count;
 }
 
-/*function nextGeneration(matrix) {
+function nextGeneration(matrix) {
 	const newMatrix = createMatrix(matrix.length, matrix[0].length);
-
-	return matrix;
+	var secondMatrix = newMatrix;
+	for(var i = 0; i < newMatrix.length; i++){
+		for(var j = 0; j < newMatrix[0].length; j++){
+			var counter = countNeighbours(newMatrix, j, i);
+			if (counter === 3) {
+				secondMatrix[i][j] = 1;
+			}
+		}
+	}
+	return secondMatrix;
 }
 
 
-var matrix = createMatrix(...);
+var matrix = createMatrix(5, 5);
 setInterval(function() {
-	drawMatrix();
+	drawMatrix(matrix);
 	matrix = nextGeneration(matrix);
 }, 1000);*/
 
 
-console.log(countNeighbours([[1, 0, 1], [0, 0, 0], [1, 0, 0]], 2, 2))
+console.log(countNeighbours([[1, 1, 1], [1, 1, 1], [1, 1, 1]], 0, 0))
