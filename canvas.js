@@ -48,7 +48,11 @@ function drawMatrix(matrix){
 
 }
 
-drawMatrix([[1, 0, 1], [0, 1, 0], [1, 0, 1]]);
+function clearCanvas() {
+	ctx.clearRect(0, 0, c.width, c.height);
+}
+
+// drawMatrix([[1, 0, 1], [10, 1, 0], [1, 0, 1]]);
 
 
 
