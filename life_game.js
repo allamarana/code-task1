@@ -1,21 +1,9 @@
-/*var c = document.getElementById('firstCanvas');
-var ctx = c.getContext('2d');*/
+var c = document.getElementById('firstCanvas');
+var ctx = c.getContext('2d');
 
 function countNeighbours(matrix, x, y) {
 	var count = 0;
-	/**
-		0, +1
-		0, -1
 
-		+1, 0
-		-1, 0
-
-		-1, -1
-		+1, +1
-
-		-1, +1
-		+1, -1
-	**/
 	if(matrix[x + 1] && matrix[x + 1][y] === 1){
 		count++;
 	}

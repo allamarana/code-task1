@@ -1,4 +1,4 @@
-/*const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(String);
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(String);
 
 function isDigit(char) {
 	return digits.includes(char);
@@ -41,7 +41,7 @@ function startsWith(str, letters){
 	return str.indexOf(letters) === 0;
 }
 
-console.log(startsWith("hello, world!", "he"));*/
+console.log(startsWith("hello, world!", "he"));
 
 function createArray(num){
 	var arr = [];
