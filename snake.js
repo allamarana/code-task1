@@ -60,6 +60,6 @@ setInterval(function() {
 	clearCanvas();
 	var matrix = createMatrix(10, 10);
 	applySnakeToMatrix(snake, matrix);
-	snakeDirection(snake, 'up-right' matrix);
+	snakeDirection(snake, 'up-right', matrix);
 	drawMatrix(matrix);
 }, 500);
