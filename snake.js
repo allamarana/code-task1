@@ -13,38 +13,19 @@ function applySnakeToMatrix(snake, matrix){
 function snakeDirection(snake, direction){
 	var x = snake[0][0];
 	var y = snake[0][1];
+	snake.pop();
 	if(direction === 'right'){		
 		snake.unshift([x + 1, y]);
-		snake.pop();
 	}
 	if(direction === 'left'){
-		snake.push([x - 1, y]);
-		snake.shift();
+		snake.unshift([x - 1, y]);
 	}
-	// if(direction === 'down-left'){
-	// 	x = snake[2][0];
-	// 	y = snake[2][1];
-	// 	matrix[x][y] = 0
-	// 	snake.push([snake[0][0], snake[0][1] + 1]);
-	// }
-	// if(direction === 'up-left'){
-	// 	x = snake[2][0];
-	// 	y = snake[2][1];
-	// 	matrix[x][y] = 0
-	// 	snake.push([snake[0][0], snake[0][1] - 1]);
-	// }
-	// if(direction === 'down-right'){
-	// 	x = snake[0][0];
-	// 	y = snake[0][1];
-	// 	matrix[x][y] = 0
-	// 	snake.push([snake[2][0], snake[2][1] + 1]);
-	// }
-	// if(direction === 'up-right'){
-	// 	x = snake[0][0];
-	// 	y = snake[0][1];
-	// 	matrix[x][y] = 0
-	// 	snake.push([snake[2][0], snake[2][1] - 1]);
-	// }
+	if(direction === 'down'){
+		snake.unshift([x, y + 1]);
+	}
+	if(direction === 'up'){
+		snake.unshift([x, y - 1]);
+	}
 }
 
 var snake = [
@@ -58,7 +39,7 @@ setInterval(function() {
 	var matrix = createMatrix(10, 10);
 	applySnakeToMatrix(snake, matrix);
 	drawMatrix(matrix);
-	snakeDirection(snake, 'left', matrix);
+	snakeDirection(snake, 'up', matrix);
 }, 500);
 
 
