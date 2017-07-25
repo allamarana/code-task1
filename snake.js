@@ -10,6 +10,21 @@ function applySnakeToMatrix(snake, matrix){
 
 }
 
+class SnakeGame {
+	constructor(){
+		this.snake = [
+	[4, 2], 
+	[3, 2],
+	[2, 2], 
+];
+		this.x
+
+	}
+
+}
+
+let snakeGame = new SnakeGame;
+
 function snakeDirection(snake, direction){
 	var x = snake[0][0];
 	var y = snake[0][1];
@@ -28,11 +43,10 @@ function snakeDirection(snake, direction){
 	}
 }
 
-var snake = [
-	[4, 2], // HEAD
-	[3, 2],
-	[2, 2], // Tail
-];
+function isRightDirection(snake, direction){
+	i
+}
+
 
 setInterval(function() {
 	clearCanvas();
