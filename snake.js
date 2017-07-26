@@ -2,28 +2,40 @@ var c = document.getElementById('firstCanvas');
 var ctx = c.getContext('2d');
 
 function applySnakeToMatrix(snake, matrix){
-	for(var i = 0; i < snake.length; i++){
-		var x = snake[i][0];
-		var y = snake[i][1];
-		matrix[x][y] = 1;
-	}
+	
 
 }
 
 class SnakeGame {
-	constructor(){
+	constructor() {
 		this.snake = [
-	[4, 2], 
-	[3, 2],
-	[2, 2], 
-];
-		this.x
+		[4, 2], 
+		[3, 2],
+		[2, 2], 
+		];
+		this.direction = 'down'; 
 
+		// this.nextStep = 
+	}
+
+	getMatrix() {
+		var matrix = createMatrix(5, 5);
+		for(var i = 0; i < this.snake.length; i++){
+			var x = this.snake[i][0];
+			var y = this.snake[i][1];
+			matrix[x][y] = 1;
+		}
+		return matrix;
+	}
+
+	nextStep() {
+		console.log('next');
 	}
 
 }
 
-let snakeGame = new SnakeGame;
+let snakeGame = new SnakeGame();
+snakeGame.getMatrix();
 
 function snakeDirection(snake, direction){
 	var x = snake[0][0];
