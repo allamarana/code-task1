@@ -1,10 +1,6 @@
 var c = document.getElementById('firstCanvas');
 var ctx = c.getContext('2d');
 
-function applySnakeToMatrix(snake, matrix){
-	
-
-}
 
 class SnakeGame {
 	constructor() {
@@ -13,13 +9,11 @@ class SnakeGame {
 		[3, 2],
 		[2, 2], 
 		];
-		this.direction = 'down'; 
-
-		// this.nextStep = 
+		this.direction = 'd'; 
 	}
 
 	getMatrix() {
-		var matrix = createMatrix(5, 5);
+		var matrix = createMatrix(50, 50);
 		for(var i = 0; i < this.snake.length; i++){
 			var x = this.snake[i][0];
 			var y = this.snake[i][1];
@@ -32,40 +26,46 @@ class SnakeGame {
 		console.log('next');
 	}
 
+	snakeDirection () {
+		var x = this.snake[0][0];
+		var y = this.snake[0][1];
+		this.snake.pop();
+		if(this.direction === 'r'){		
+			this.snake.unshift([x + 1, y]);
+		}
+		if(this.direction === 'l'){
+			this.snake.unshift([x - 1, y]);
+		}
+		if(this.direction === 'd'){
+			this.snake.unshift([x, y + 1]);
+		}
+		if(this.direction === 'u'){
+			this.snake.unshift([x, y - 1]);
+		}
+	}
+
+	isRightDirection(){
+		var headX = this.snake[0][0];
+		var headY = this.snake[0][1];
+		if (headX === this.snake[1][0] && headY === this.snake[1][1]) {
+			return false;
+		}
+		return true;
+	}
+	
+
 }
 
 let snakeGame = new SnakeGame();
 snakeGame.getMatrix();
 
-function snakeDirection(snake, direction){
-	var x = snake[0][0];
-	var y = snake[0][1];
-	snake.pop();
-	if(direction === 'right'){		
-		snake.unshift([x + 1, y]);
-	}
-	if(direction === 'left'){
-		snake.unshift([x - 1, y]);
-	}
-	if(direction === 'down'){
-		snake.unshift([x, y + 1]);
-	}
-	if(direction === 'up'){
-		snake.unshift([x, y - 1]);
-	}
-}
 
-function isRightDirection(snake, direction){
-	i
-}
 
 
 setInterval(function() {
 	clearCanvas();
-	var matrix = createMatrix(10, 10);
-	applySnakeToMatrix(snake, matrix);
-	drawMatrix(matrix);
-	snakeDirection(snake, 'up', matrix);
+	drawMatrix(snakeGame.getMatrix());
+	snakeGame.snakeDirection();
 }, 500);
 
 
