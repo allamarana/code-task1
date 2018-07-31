@@ -1,5 +1,5 @@
 # assume Python 2
-data = [ 2, 4, 6 ]
+data = [ "1", "2", "3" ]
 total = 0
 average = 0
 n = 0
