@@ -2,8 +2,9 @@
   display: inline-grid;
   grid-template-columns: 200px 200px 200px;
   grid-template-rows: 200px 200px 200px;
-  background-color: black;
-  paddind: 5px;
+  background-color: white;
+  padding: 5px;
+ 
 }
 .grid-item {
   background-color: white;
@@ -16,4 +17,11 @@
   display: none;
   background-color: powderblue;
 
+}
+.mainDiv {
+  text-align: center;
+}
+
+.hide {
+  display: none;
 }
