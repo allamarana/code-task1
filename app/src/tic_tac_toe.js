@@ -2,13 +2,10 @@ import React from 'react';
 import _ from 'lodash';
 import { render } from 'react-dom';
 import './App.css'
-//import './dropdown'
-//import Dropdown from './dropdown';
-import Counter  from './counter.js'
 
 
 
-/*class TicTacToe extends React.Component {
+class TicTacToe extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -111,24 +108,20 @@ import Counter  from './counter.js'
       </div>
     )
   }
-}*/
+}
 
 
 function App(){
   return (
-   /*<div className="mainDiv">
+   <div className="mainDiv">
        <h1>  Крестики- нолики </h1>
       <TicTacToe />
-      </div> */
+      </div> 
 
-    /* <div>
-       <Dropdown />
+     <div>
+       <App />
     </div>
-    */
-
-   <div>
-     <Counter />
-  </div>
+    
   )
 }
 render (<App />, document.getElementById('root'))

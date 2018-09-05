@@ -1,0 +1,12 @@
+.default  {
+    color: black;
+}
+
+.boom {
+    color: red;
+}
+
+.default, .boom {
+    text-align: center;
+    font-size: 100px;
+}
