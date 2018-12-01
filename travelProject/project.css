@@ -1,0 +1,144 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background: #fefefe;
+    margin: 0;
+}
+
+.wrapper{
+    box-shadow: 0px 6px 43px #ccc;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    width: auto;
+    height: 575px;
+    background-image: url('Hero.jpg');
+    font-family: Helvetica, sans-serif;
+}
+
+.content > p {
+    font-weight: normal;
+
+}
+.content > h1 {
+    text-align: center;
+}
+.content > p {
+    text-align: center;
+}
+.toptext {
+    padding-top: 186px;
+    text-align: center;
+    font-size: 70px;
+    font-weight: normal;
+}
+.generaltext {
+    text-align: center;
+    font-weight: normal;
+    width: 471px;
+    font-size: 35px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-container > * {
+    flex: 1 0 50%;
+    width: 100%;
+    min-width: 320px;
+    justify-content: center;
+    text-align: center;
+}
+.flex-container div article {
+   width: 50%;
+}
+.content{
+    display: flex;
+}
+#head1, #head2, #head3{
+    text-align: center;
+}
+.japan{
+    width: 50%;
+    height: 420px;
+    background-size: cover;
+    background-position: right;
+    background-image: url("/Users/allamarana/code-task1/travelProject/Japan Image.png");
+}
+.japan-content {
+    text-align: left;
+    width: 325.5px;
+    margin: auto;
+}
+.carib{
+    width: 50%;
+    height: 420px;
+    background-image: url("/Users/allamarana/code-task1/travelProject/Caribbean image.png")
+}
+.carib-content{
+    text-align: left;
+    width: 325.5px;
+    margin: auto;
+}
+.austr{
+    background-image: url("/Users/allamarana/code-task1/travelProject/Australia image.png");
+    width: 50%;
+    height: 420px;
+}
+.austr-content{
+    text-align: left;
+    width: 325.5px;
+    margin: auto;
+}
+
+.footer{
+
+    height: 393px;
+    background-image: linear-gradient(-180deg, #f0ddff 0%, #EBD2FF 100%);
+}
+.form-text{
+    font-size: 40px;
+    margin: 0;
+    padding: 130px 0 41px 0;
+}
+form{
+    text-align: center;
+}
+.email{
+    height: 50px;
+    width: 433px;
+    border: none;
+    padding: 0;
+    font-size: 18px;
+    color: grey;
+    border-radius: 10px 0px 0px 10px;
+    font-family: "HelveticaNeue-Thin", Helvetica, sans-serif;
+    padding-left: 20px; 
+}
+.signup{
+    height: 50px;
+    width: 138px;
+    background-color: #9013fe;
+    color: white;
+    font-size: 20px;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    vertical-align: top;
+}
+
+/*-------adapt-------------*/
+
+@media (min-width:0px) and (max-width:920px){
+    .toptext {
+        font-size: 50px !important;
+    }
+    .generaltext{
+        font-size: 20px !important;
+    }
+}

@@ -1,0 +1,207 @@
+.body{
+   /* height: 3850px;
+    width: 1400px;*/
+    background: #f3f3f3;
+    margin: 0;
+}
+.wrapper{
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.socnetw{
+    /*display: inline;
+    margin: 68px 1190px 103px 1017px ;*/
+}
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.socnetw > span {
+    line-height: 35px;
+    vertical-align: center;
+    font-family: FontAwesome5BrandsRegular;
+    font-size: 18px;
+    color: #A9A9A9;
+    letter-spacing: 0;
+    text-align: center;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: #A9A9A9;
+    flex-grow: 1;
+
+}
+.pagename > * {
+    font-family: SignPainter-HouseScript;
+    color: #525252;
+    letter-spacing: 0;
+    text-align: center;
+    flex-grow: 2;
+}
+.mahmuda{
+    font-size: 64px;
+
+   /* line-height: 170px;
+    vertical-align: center;*/
+}
+ .orange {
+     color: #FFAC5E
+ }
+ .creative{
+    font-size: 18px;
+
+ }
+ .welcome{
+    font-family: Montserrat-Light, sans-serif;
+    font-size: 13px;
+    color: #525252;
+    letter-spacing: 0;
+    line-height: 26px;
+
+ }
+ .menu{
+    vertical-align: middle;
+    display: flex;
+    text-align: center;
+    line-height: 75px;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+ .menu > li {
+    color: #525252;
+    display: inline-block;
+    flex-wrap: wrap;
+    font-family: Montserrat-Regular, sans-serif;;
+    font-size: 13px;
+    letter-spacing: 2.1px;
+    justify-content: center;
+    flex: 1;
+ }
+ #drink {
+    color: #FFAC5E;
+ }
+ .content{
+    background-color: #f3f3f3;
+    font-family: GildaDisplay-Regular, sans-serif;
+    font-size: 24px;
+    color: #222222;
+    letter-spacing: 0px;
+    text-align: center;
+ }
+
+ .travelpic1 {
+    background-image:url('/Users/allamarana/TravelBlog/slider-1.png');
+    background-repeat: no-repeat;
+    height: 604px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    /*flex-direction: column;
+    justify-content: flex-end;*/
+    line-height: 0;
+ }
+ .travelpic2 {
+    background-image:url('/Users/allamarana/TravelBlog/slider-1.png');
+    background-repeat: no-repeat;
+    height: 604px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    /*flex-direction: column;
+    justify-content: flex-end;*/
+    line-height: 0;
+ }
+ .travelpic3 {
+    background-image:url('/Users/allamarana/TravelBlog/slider-1.png');
+    background-repeat: no-repeat;
+    height: 604px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    /*flex-direction: column;
+    justify-content: flex-end;*/
+    line-height: 0;
+ }
+
+/* .trtext{
+
+    height: 103px;
+    width: 643px;
+    opacity: 0.89;
+    background: #FFFFFF;
+    margin: 0 auto 65px auto;
+}
+
+.voluptas1{
+    margin:0 auto;
+}
+.voluptas2{
+    margin:0 auto;
+}
+.voluptas3{
+    margin:0 auto;
+}
+
+.travel1{
+    height: 26px;
+    width: 75px;
+    background-color: #FFAC5E;
+    color: white;
+    font-size: 13px;
+    margin: 17px auto 0 auto;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+.travel2{
+    height: 26px;
+    width: 75px;
+    background-color: #FFAC5E;
+    color: white;
+    font-size: 13px;
+    margin: 17px auto 0 auto;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+.travel3{
+    height: 26px;
+    width: 75px;
+    background-color: #FFAC5E;
+    color: white;
+    font-size: 13px;
+    margin: 17px auto 0 auto;
+    letter-spacing: 0;
+    text-transform: uppercase;
+} */
+#slider{
+    margin: 0 auto;
+}
+
+#slider article{
+    width: 20%;
+    float: left;
+}
+#overflow{
+    width:100%;
+    overflow: hidden;
+}
+article .travelpic1 .travelpic2 .travelpic3{
+    width: 100%;
+}
+
+#desktop: checked ~ #slider {
+    max-width: 960 px;
+}
+
+
+#switch1: checked ~ #controls label:nth-child(3)
+#switch2: checked ~ #controls label:nth-child(1)
+#switch3: checked ~ #controls label:nth-child(2)
