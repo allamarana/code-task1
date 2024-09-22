@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Square</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="square">
+        <button onclick="alert('Hi!')">Hi</button>
+        <button onclick="alert('You are not welcomed')">You are not welcomed</button>
+        <button onclick="alert('Let\'s play Witcher 3')">Let's play Witcher 3</button>
+    </div>
+</body>
+</html>

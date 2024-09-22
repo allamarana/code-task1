@@ -25,7 +25,7 @@
 .socnetw > span {
     line-height: 35px;
     vertical-align: center;
-    font-family: FontAwesome5BrandsRegular;
+    font-family: FontAwesome5BrandsRegular, sans-serif;
     font-size: 18px;
     color: #A9A9A9;
     letter-spacing: 0;
@@ -98,38 +98,35 @@
     text-align: center;
  }
 
- .travelpic1 {
-    background-image:url('slider-1.png');
+ .slide {
     background-repeat: no-repeat;
     height: 604px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    width: 940px;
+    /* margin: 0 auto; */
+    display: inline-block;
+   /* flex-direction: column;
+    justify-content: flex-end; */
     line-height: 0;
+ }
+
+.slides {
+    width:400%;
+    text-align: left;
+}
+
+.overflow {
+    overflow: hidden;
+    width: 940px;
+}
+
+ .travelpic1 {
+    background-image:url('slider-1.png');
  }
  .travelpic2 {
     background-image:url('slider-1.png');
-    background-repeat: no-repeat;
-    height: 604px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    line-height: 0;
  }
  .travelpic3 {
     background-image:url('slider-1.png');
-    background-repeat: no-repeat;
-    height: 604px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-   flex-direction: column;
-    justify-content: flex-end;
-    line-height: 0;
  }
 
 /*.trtext{
@@ -181,21 +178,18 @@
     letter-spacing: 0;
     text-transform: uppercase;
 } */
-#slider{
+#slider {
     margin: 0 auto;
 }
 
-#slider article{
+/* #slider article {
     width: 20%;
     float: left;
-}
-#overflow{
-    width:100%;
-    overflow: hidden;
-}
-article .travelpic1 .travelpic2 .travelpic3{
+} */
+
+/* article .travelpic1 .travelpic2 .travelpic3 {
     width: 100%;
-}
+} */
 
 /* #desktop: checked ~ #slider {
     max-width: 960 px;
